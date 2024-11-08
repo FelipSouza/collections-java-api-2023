@@ -31,33 +31,31 @@ public class CarrinhoDeCompras {
 
 
     public void exibirItens(){
+        System.out.println("Itens presentes no carrinho:");
         System.out.println(carrinhoDeCompras);
     }
-    /* resolver erro
+
     public void calcularValorTotal(){
 
         //variável que armazena valor total
         double valorTotal = 0.0;
 
         for(Item i : carrinhoDeCompras){
-            valorTotal += i.getQuantidade();
-            System.out.println("O preço total dos itens no carrinho é: R$" + valorTotal);
+            valorTotal += i.getPreco()*i.getQuantidade();
         }
+
+        System.out.println("\nValor total é: " + String.format("%.2f", valorTotal));
     }
-    */
 
     public static void main(String[] args) {
         CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
 
         carrinhoDeCompras.adicionarItem("Feijão", 7.99, 2);
         carrinhoDeCompras.removerItem("Feijão");
-        //carrinhoDeCompras.calcularValorTotal();
         carrinhoDeCompras.adicionarItem("Sabão", 10.45, 4);
         carrinhoDeCompras.adicionarItem("Farinha", 6.50, 2);
         carrinhoDeCompras.adicionarItem("Suco de Uva", 12.99 , 2);
         carrinhoDeCompras.exibirItens();
-
+        carrinhoDeCompras.calcularValorTotal();
     }
-
-
 }

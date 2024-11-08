@@ -16,7 +16,7 @@ public class Item {
         return nome;
     }
 
-    public double getPreço() {
+    public double getPreco() {
         return preco;
     }
 
