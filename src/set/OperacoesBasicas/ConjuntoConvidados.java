@@ -36,6 +36,22 @@ public class ConjuntoConvidados {
 
     public static void main(String[] args) {
 
+        ConjuntoConvidados conjuntoConvidados = new ConjuntoConvidados();
+
+        conjuntoConvidados.adicionarConvidado("Convidado 1", 1234);
+        conjuntoConvidados.adicionarConvidado("Convidado 2", 1235);
+        conjuntoConvidados.adicionarConvidado("Convidado 3", 1236);
+        conjuntoConvidados.adicionarConvidado("Convidado 4", 1235);
+        conjuntoConvidados.adicionarConvidado("Convidado 5", 1237);
+
+        System.out.println("Exitem " + conjuntoConvidados.contarConvidados() + " convidado(s) dentro do Set do Convidados");
+
+        conjuntoConvidados.removerConvidadoPorCodigoConvite(1235);
+
+        System.out.println("Exitem " + conjuntoConvidados.contarConvidados() + " convidado(s) dentro do Set do Convidados");
+
+        conjuntoConvidados.exibirConvidados();
+
     }
 
 }
