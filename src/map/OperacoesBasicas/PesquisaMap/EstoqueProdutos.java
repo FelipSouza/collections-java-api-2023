@@ -34,6 +34,7 @@ public class EstoqueProdutos {
         if(!estoqueProdutosMap.isEmpty()) {
             for (Produto p : estoqueProdutosMap.values()) {
                 if(p.getPreco()> maiorPreco){
+                    maiorPreco = p.getPreco();
                     produtoMaisCaro = p;
                 }
             }
@@ -74,7 +75,7 @@ public class EstoqueProdutos {
     public static void main(String[] args) {
         EstoqueProdutos estoqueProdutos = new EstoqueProdutos();
 
-        estoqueProdutos.adicionarProduto(1, "Sabão", 30, 10.00);
+        estoqueProdutos.adicionarProduto(1, "Sabão", 30, 45.00);
         estoqueProdutos.adicionarProduto(2, "Luva", 10, 12.00);
         estoqueProdutos.adicionarProduto(3, "Frango", 10, 25.00);
 
