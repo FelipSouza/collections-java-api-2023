@@ -1,4 +1,4 @@
-package map.AgendaEventos;
+package map.OperacoesBasicas.AgendaEventos;
 
 public class Evento {
     //atributos
